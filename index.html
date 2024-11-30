@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SooyaBobastea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sooya's Bobastea ❤️ </h1>
+        <p>Enter your username to view your purchases.</p>
+    </header>
+
+    <main>
+        <!-- Admin Login Section -->
+        <section class="admin-section">
+            <h2>Only for Admin Usage</h2>
+            <input type="password" id="adminPasswordInput" placeholder="Enter Admin Password" />
+            <button onclick="validatePassword()">boba</button>
+        </section>
+
+        <!-- Manual Input Section (Visible only after admin login) -->
+        <section id="inputSection" class="input-section" style="display: none;">
+            <h2>Enter Purchases</h2>
+            <form id="purchaseForm">
+                <input type="text" id="nameInput" placeholder="Enter user's name" required />
+                <textarea id="purchasesInput" placeholder="Enter items bought (comma separated)" required></textarea>
+                <button type="submit">Save Purchases</button>
+            </form>
+        </section>
+
+        <!-- Edit Purchases Section (Visible only after admin login) -->
+        <section id="editSection" class="edit-section" style="display: none;">
+            <h2>Edit Purchases</h2>
+            <form id="editForm">
+                <input type="text" id="editNameInput" placeholder="Enter user's name" required />
+                <textarea id="editPurchasesInput" placeholder="Enter additional items (comma separated)" required></textarea>
+                <button type="submit">Update Purchases</button>
+            </form>
+        </section>
+
+        <!-- Delete Purchases Section (Visible only after admin login) -->
+        <section id="deleteSection" class="delete-section" style="display: none;">
+            <h2>Delete Purchases</h2>
+            <form id="deleteForm">
+                <input type="text" id="deleteNameInput" placeholder="Enter user's name" required />
+                <button type="submit">Show Purchases</button>
+            </form>
+            <ul id="deleteItemList"></ul>
+        </section>
+
+        <!-- Search Section (Visible to everyone) -->
+        <section class="search-section">
+            <h2>Search for Purchases</h2>
+            <p>Please key in without the @</p>
+            <input type="text" id="searchNameInput" placeholder="Enter a name to search" />
+            <button onclick="searchPurchases()">Search</button>
+        </section>
+
+        <!-- Search Results -->
+        <section class="result-section">
+            <h2>Your Purchased Items:</h2>
+            <ul id="purchaseList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ by Sooya's Bobastea</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
